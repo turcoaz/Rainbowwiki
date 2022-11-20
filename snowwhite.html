@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UFT-8">
+  <meta name="keywords" content="무지개 위키">
+  <meta name="description" content="무지개만의 위키백과 입니다.">
+  <meta name="author" content="we_is_rainbow">
+  <head>
+    <title>무지개 위키</title>
+    <link rel="icon" href="logo.ico">
+  </head>
+  <style>
+    body{
+      margin: 0;
+      background-color: rgba(241, 241, 241, 0.212);
+    }
+    *{
+      font-family: 'GmarketSansLight';
+      word-break: keep-all;
+    }
+    a:link, a:visited, a:active{
+      color : rgb(16, 92, 255);
+      text-decoration: none;
+    }
+    a:hover{
+      color: rgb(16, 92, 255);
+      text-decoration: underline;
+    }
+    @font-face{
+      font-family: 'GmarketSansBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face{
+      font-family: 'GmarketSansMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face{
+      font-family: 'GmarketSansLight';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <style>
+    .left_sidebar{
+      width: 17vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgb(236, 255, 249);
+    }
+    .rainbow_title{
+      display: inline-block;
+      cursor: pointer;
+    }
+    .rainbow_title>h1{
+      margin-top: 4vh;
+      margin-left: 2.5vw;
+      border-style: none;
+      background-color: transparent;
+      font-family: 'GmarketSansBold';
+      font-size: 35px;
+      text-align: center;
+    }
+    .rainbow_title>p{
+      margin-top: -2vw;
+      margin-left: 3.1vw;
+      font-family: 'GmarketSansMedium';
+      font-size: 12px;
+      letter-spacing: 0.8vw;
+    }
+    .left_sidebar>img{
+      width: 6vw;
+      margin-left: -0.5vw;
+      vertical-align: -1.3vw;
+      display: inline-block;
+    }
+    .left_sidebar_l{
+      margin-left: 2.5vw;
+    }
+    .left_sidebar_l>p{
+      font-size: 19px;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    .contents{
+      width: 20vw;
+      height: 40vw;
+      border: 3px solid rgba(116, 116, 116, 0.274);
+      background-color: #ffffff;
+      position: fixed;
+      top: 3.5vh;
+      right: 2vw;
+    }
+    .contents_t{
+      margin-left: 1vw;
+      margin-bottom: 1.2vw;
+      font-size: 22px;
+    }
+    .contents_c{
+      margin-left: 1.5vw;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .contents_c>span, .contents_c_c>span{
+      margin-right: 0.5vw;
+      cursor: pointer;
+    }
+    .contents_c_c{
+      margin-left: 2.8vw;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    strong{
+      font-family: 'GmarketSansMedium';
+    }
+  </style>
+  <style>
+    .main{
+      width: 54.7vw;
+      height: auto;
+      padding: 2vw 2vw;
+      background-color: white;
+      box-shadow: 3px 0px 10px #e6e6e6;
+      position: absolute;
+      top: 0vw;
+      left: 17vw;
+    }
+    .main>h1{
+      margin-top: -0.5vw;
+      font-family: 'GmarketSansMedium';
+    }
+    table{
+      width: 100%;
+      margin-bottom: 2vw;
+      border: 3px solid #007474;
+      border-collapse: collapse;
+    }
+    .one{
+      padding: 5px;
+      color: white;
+      background-color: #007474;
+      border-right: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      font-size: 17px;
+      text-align: center;
+    }
+    .two{
+      padding: 5px 20px;
+      border-bottom: 1px solid lightgrey;
+    }
+    .plus{
+      color: rgb(200, 200, 200);
+    }
+    .small{
+      font-size: 12px;
+    }
+    .small-top{
+      font-size: 12px;
+      vertical-align: 0.5vw;
+    }
+    .small-bottom{
+      font-size: 12px;
+      vertical-align: 0.2vw;
+    }
+  </style>
+  <style>
+    .introduce_t{
+      font-size: 20px;
+    }
+    .introduce_t>span{
+      color: rgb(16, 92, 255);
+    }
+    .contents_c_t{
+      margin-bottom: 3vw;
+    }
+    .plot{
+      padding-left: 20px;
+      padding-right: 20px;
+      word-break: keep-all;
+    }
+  </style>
+  <body>
+    <div class="left_sidebar">
+      <div class="rainbow_title" onclick="location.href='rainbow.html'">
+        <h1>무지개</h1>
+        <p>위키백과</p>
+      </div>
+      <img onclick="location.href='rainbow.html'" style="cursor: pointer;" src="https://i.ibb.co/RzCg9yv/transparent-bg-shadow-designify.png">
+      <div class="left_sidebar_l">
+        <p onclick="location.href='knh.html'">공나현</p>
+        <p onclick="location.href='kms.html'">김민서</p>
+        <p onclick="location.href='kes.html'">김은서</p>
+        <p onclick="location.href='khs.html'">김희서</p>
+        <p onclick="location.href='khj.html'">김희진</p>
+        <p onclick="location.href='jes.html'">정은서</p>
+        <p onclick="location.href='hjh.html'">한주현</p>
+      </div>
+    </div>
+    <div class="contents">
+      <p class="contents_t" style="font-family: 'GmarketSansMedium';">목차</p>
+      <p class="contents_c"><span><a href="#c1">1.</a></span>개요</p>
+      <p class="contents_c"><span><a href="#c2">2.</a></span>등장인물</p>
+      <p class="contents_c"><span><a href="#c3">3.</a></span>줄거리</p>
+      <p class="contents_c"><span><a href="#c4">4.</a></span>여담</p>
+    </div>
+    <div class="main">
+      <h1>백설공주</h1>
+      <div class="introduce">
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c1">1.</a></span> 개요</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>그림 형제의 동화 백설공주를 각색한 2017년 서울금호여자중학교 1학년 5반의 뮤지컬이다.</p>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c2">2.</a></span> 등장인물</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <ul>
+            <li>해설자 : <span><a href="khj.html">김희진</a></span>, 최지우</li>
+            <li>금호왕 : 김라현</li>
+            <ul>
+              <li>금호나라의 왕.<br>전 왕비가 죽자 새 왕비를 맞이하였다.</li>
+            </ul>
+            <li>왕 비 : <span><a href="knh.html">공나현</a></span></li>
+              <ul>
+                <li>금호나라의 새왕비.<br>잘생긴 대경나라의 왕자를 꼬시기 위해 노력한다.</li>
+              </ul>
+            <li>금호공주 : <span><a href="jes.html">정은서</a></span></li>
+              <ul>
+                <li>금호나라 공주.<br>금호나라 새왕비의 양딸이며, 아름다운 외모의 소유자이다.</li>
+              </ul>
+            <li>사냥꾼 : 이지원</li>
+              <ul>
+                <li>금호나라 새왕비의 사냥꾼.<br>왕비의 명에 따라 대경나라의 왕자를 확인하러 갔다가 첫사랑을 마주한다.</li>
+              </ul>
+            <li>왕 자 : <span><a href="hjh.html">한주현</a></span></li>
+              <ul>
+                <li>대경나라의 왕자.<br>세상에서 가장 잘생긴 외모의 소유자로, 어딜가나 인기가 끊이지 않아 항상 피곤해한다.</li>
+              </ul>
+            <li>무학공주 : 이가령</li>
+              <ul>
+                <li>무학나라의 공주.</li>
+              </ul>
+            <li>난쟁이들</li>
+              <ul>
+                <li>숲에 살며 길을 잃고 찾아온 대경나라 왕자에게 첫눈에 반하고 만다.</li>
+                <li>난쟁이 1 : <span><a href="kms.html">김민서</a></span></li>
+                <li>난쟁이 2 : 조하은</li>
+                <li>난쟁이 3 : </li>
+                <li>난쟁이 4 : <span><a href="kes.html">김은서</a></span></li>
+                <li>난쟁이 5 : <span><a href="jes.html">정은서</a></span></li>
+                <li>난쟁이 6 : <span><a href="khs.html">김희서</a></span></li>
+                <li>난쟁이 7 : 진예원(?)</li>
+              </ul>
+            <li>요정들</li>
+              <ul>
+                <li>왕자의 소꿉친구들이다.</li>
+                <li>요정 1 : 김은경(?)</li>
+                <li>요정 2 : 이가령(?)</li>
+                <li>요정 3 : 정다빈(?)</li>
+              </ul>
+          </ul>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c3">3.</a></span> 줄거리</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p class="plot">
+            ＜백설공주> 금호여중 1학년 5반
+            <br>
+            <br>해설자 : 어느 언덕위에 금호나라가 있었습니다. 그곳에는 왕과 왕비가 살았는데 사실 이 왕비는 전부인이 죽자 왕이 새로 결혼한 새왕비였습니다. 이 왕비에게는 묻는 말에 대답하는 아주 신비한 거울이 있었습니다.
+            <br>
+            <br>왕 비 : 거울아, 거울아~ 이 세상에서 누가 제일 잘 생겼니?
+            <br><del>거 짓：그거야 당연히 우리 금호나라 폐하시지요~</del>
+            <br><del>진 실 : 이 세상에서 가장 잘생긴 사람은 대경나라의 왕자입니다.</del>
+            <br><del>왕 비 : 뭐? 누가 말하는게 진찌야?</del>
+            <br><del>(거짓과 진실 서로 말다툼하며 씨운다)</del>
+            <br>왕 비 : 그럼 어디 이야기한 사람을 거울에 비춰보거라!
+            <br>(거울은 각각 자신이 이야기한 사람을 비추어 보여준다)
+            <br>왕 비 : 아니, 세상에서 가장 잘생긴 사람이 금호나라의 폐하가 아니었구나! 대경나라의 왕자는 정말 잘생겼잖아! 좋아! 내가 한번 꼬셔보겠어!
+            <br>
+            <br>해설자 : 이렇게 해서 왕비는 왕자를 꼬시기로 마음 먹었습니다. 작전을 세우기 위해 왕비는 사냥꾼을 불러 대경나라를 염탐하고 오라는 명령을 내렸습니다.
+            <br>
+            <br>사냥꾼 : 부르셨습니까?
+            <br>왕 비 : 대경나라에 가서 그 왕자가 여자친구가 있는지 없는지 알아보고, 만약에 여자친구가 있다면 그 자리에서 죽여버리고 와!
+            <br>사냥꾼 : 네. 알겠습니다!
+            <br>
+            <br>해설자 : 사냥꾼은 대경나라로 가 왕자를 염탐하였습니다. 왕자는 여자친구가 있었습니다. 사냥꾼은 왕자의 여자친구를 죽이기 위해 더 가까이 다가갔습니다.
+            <br>
+            <br>왕 자 : 공주, 그대는 어제도 그제도 예뻤는데 오늘도 예쁘군. 언제까지 이렇게 예쁠생각이지? 하하하하
+            <br>무학공주 : 어머, 왕자님도 참~ 왕자님의 사랑을 먹으니까 매일 더 예뻐지는 것 같아요~
+            <br>왕 자 : 어찌 말도 이렇게 예쁘게 하는지 깨물어주고싶어!
+            <br>무학공주 : 왕자님~ 우리 영원히 사랑해요~ 아잉
+            <br>
+            <br>해설자 : 가까이 다가가 총을 겨누던 사냥꾼은 그녀가 자신의 첫사랑 대경나라 공주인 것을 알았습니다. 왕비의 명에 따라 그녀를 죽여야했지만 차마 죽일 수 없었던 사냥꾼은 그냥 왕비에게 돌아갔습니다.
+            <br>
+            <br>왕 비 : 그래, 왕자에게는 여친이 있더냐?
+            <br>사냥꾼 : 그..그게
+            <br>왕 비 : 뭐야, 왜그렇게 우물쭈물거리지?
+            <br>사냥꾼 : 어.. 없었습니다!
+            <br>왕 비 : 그래? 알았어. 가봐
+            <br>
+            <br>해설자 : 우물쭈물하던 사낭꾼이 의심스러웠던 왕비는 양딸인 아름다운 금호공주를 대경나라로 보냈습니다. 공주는 자신이 본 내용을 솔직하게 말했습니다.
+            <br>
+            <br>왕 비 : 그래, 왕자는 사귀는 사람이 있더냐?
+            <br>금호공주 : 네~ 참나, 멀리서 딱 봐도 무학공주랑 사귀더라구요! 수준 떨어져 정말.
+            <br>왕 비 : 그렇단말이지... 여봐라! 내 사냥꾼과 무학공주를 처형하러 가야겠다! 말과 칼을 준비해!
+            <br>
+            <br>(왕비가 가운데에 위치하고 양 옆에 사냥꾼과 무학공주가 자리를 잡는다. 왕비는 대사를 뒤돌아 선 상태에서 대사 한마디와 함께 한명씩 죽인다.)
+            <br>
+            <br>왕 비 : (사낭꾼에게) 네가 감히 나를 배신해? (무학공주에게) 미안하지만 왕자는 내거야. 죽어줘야겠어.
+            <br>
+            <br>해설자 : 이렇게 사냥꾼과 무학공주를 죽인 왕비는 대경왕자에게 가서 협박을 (왕비가 죽일 듯이 째려보면) 아니, 고백을 하는데...
+            <br>
+            <br>왕 비 : 왕자님, 저의 연인이 되어주세요. 만약 거절하면 무학공주랑 같은 꼴이 될거야.<span class="small-top"><del>설레는 반존대</del></span> 잘 생각해. 아하하하하하
+            <br>
+            <br>해설자 : 한편, 금호나라의 왕은 왕비가 바람피우는 것은 아닌지 의심하기 시작하였습니다. 왕비는 의심을 피하기 위해 매일 왕과 함께 있어야했고 왕자를 자주 만나지 못했습니다. 그때, 왕자는 자신의 소꿉친구인 요정에게 고민상담을 하러 숲에 들어갔다가 길을 잃었습니다.
+            <br>
+            <br>왕자 : 이쯤인 것 같은데... 왜 안보이지? 한시간도 넘게 걸은 것 같은데... (큰 소리로) 거기~ 아무도~ 없나요? 요..요..요..
+            <br>
+            <br>난쟁이2 : 어? 무슨 소리지?
+            <br>난쟁이4 : 무슨소리?
+            <br>난쟁이2 : 방금 저쪽에서 "요..요..요..." 이런 소리 들렸잖아!
+            <br>난쟁이1 : 야! 뭐라는거야! 쯧쯧... 너는 난쟁이가 아니라 난청인거 같아.
+            <br>난쟁이2 : 내가 난청이면 니들은 다 귀머거리야!!! (삐진다)
+            <br>난쟁이7 : 야! 작작하고 저쪽에 가보자 그럼.
+            <br>
+            <br>해설자 : 왕자의 목소리를 쫓아 숲으로 들어간 난쟁이들은 왕자를 발견하자마 첫눈에 반하고 말았습니다. (음악이 나오면 다들 첫눈에 반한 것 같은 모습을 보인다) 그리고 왕자를 놓치고 싶지 않았던 난쟁이들은 왕자를 집으로 초대합니다.
+            <br>
+            <br>난쟁이4 : 여기야! 어서와!
+            <br>왕 자 : 초대해줘서 고마워!
+            <br>난쟁이3 : 아니야~ 우리야 발로 와줘서 고마워!!
+            <br>난쟁이6 : 저... 오늘은 이미 밤이 늦었으니까 우리집에서 자고 가지 않을래?
+            <br>왕 자 : 어? 그럼 너무 민폐일 것 같은데...
+            <br>난쟁이1 : 아니야! 니가 안자고 가는게 민페야!
+            <br>난쟁이5 : 맞아.. 밤에는...위험하기도 하고.. (소심하게 작은 목소리로) 저기.. 비... 빈방도 있어요…
+            <br>왕 자 : 정말 그래도 돼?
+            <br>난쟁이7 : 얘들아! 손님맞이 준비! (다 함께 왕자를 데리고 퇴장한다)
+            <br>
+            <br>해설자 : 이렇게 왕자는 난쟁이들의 집에 머무르게 되었는데... 모두가 잠든 깜깜한 밤. 여섯 번째 난쟁이는 살금살금 왕자에게 다가갔습니다.
+            <br>
+            <br>난쟁이6 : 왕자님! 일어나세요!! 왕자님!!
+            <br>왕 자  : (큰소리로) 엄마야!!! 깜짝이야. 무슨일이에요?
+            <br>난쟁이6 : 왕자님, 우리 난쟁이들 모두 당신에게 반해버렸어요. 그래서 곧 당신을 두고 큰 싸움이 벌어질거에요. 그런일이 일어나지 않도록 당신이 얼른 도망쳐주세요!
+            <br>왕 자 : 아! 진짜, 이놈에 인기는 …. 피곤해… 알겠어! 고마워!
+            <br>난쟁이6 : 휴…다행이?? (난쟁이6의 뒤로 난쟁이들이 나와서 무섭게 노려보며 서있다)
+            <br>난쟁이2 : 너.. 뭐한거야?
+            <br>난쟁이7 : 넌, 이제부터 우리편이 아니야.
+            <br>
+            <br>해설자 : 왕자를 도망치게 해준 여섯 번째 난쟁이는 자매들에게 처참하게 죽임을<span class="small-top">죽임까지.. 당할일일까..?</span> 당하고 난쟁이들은 왕자를 쫓았습니다.
+            <br>
+            <br>왕 자 : 헉…헉… 쫓아오잖아!! 이러다 잡힐거 같은데!
+            <br>
+            <br>해설자 : 이때, 요정들이 나타났습니다.
+            <br>
+            <br>요 정1 : 뭐지? 저 아름다운 빛은?
+            <br>요 정2 : 어디어디?
+            <br>요 정3 : 어? 위험해 보여! 우리가 도와주자!
+            <br>요 정1 : 그럼그럼! 아름다운것들은 보호해야해!
+            <br>요 정2 : 아 왜~ 재밌는 일이 벌어질 것 같단 말이야~ 좀 더 지켜보자!
+            <br>요 정3 : 어? 저거.. 왕자 아니야?
+            <br>요정들 : 맞네! 왕자야! 이쪽이야!
+            <br>왕 자 : 어? 요정들아!
+            <br>요 정2 : (매고 있던 책가방을 열어주며) 어서 여기로 들어와!
+            <br>왕 자 : 여…여기?
+            <br>요정들 : 야! 거길 어떻게 들어가!!!!
+            <br>요 정2 : 왜에 ~ 재밌잖아!
+            <br>
+            <br>해설자 : 요정들을 만나 목숨을 건진 왕자는 요정들에게 고민을 털어놓았습니다.
+            <br>요 정1 : 근데, 도대체 무슨일이야?
+            <br>왕 자 : 얘들아, 사실 내가 좋아하는 공주가 있는데… 금호나라 왕비가 너무 무서워서 헤어질 수가 없어. 고백할수도 없고…
+            <br>요정들 : 그…그렇구나….
+            <br>
+            <br>해설자 : 요정들은 사실 왕자를 아주 오래전부터 좋아하고 있었습니다. 하지만 진정한 사랑은 사랑하는 사람이 행복해지는 거라고 생각했죠!
+            <br>
+            <br>요 정1 : 그런일이 있었구나.. 우리가 한번 마녀를 떼어낼 수 있는 방법이 있는지 연구해볼게!
+            <br>왕 자 : 정말 고마워! 역시 넌 좋은 친구라니까~ 나 그럼 가볼게!
+            <br>요정들 : 잘가!
+            <br>요 정3 : 좋은 방법이 없을까?
+            <br>요 정2 : 나한테 좋은 방법이 있어! 마녀가 바람피고 있다는 것을 금호나라 왕에게 알리면 알아서 해결해 줄거야!
+            <br>요정들 : 역시! 넌 천재야!
+            <br>
+            <br>해설자 : 요정은 마녀가 바람핀 사실을 왕에게 알리기 위해 왕의 꿈 속으로 들어갔어요.
+            <br>
+            <br>금호왕 : (누워서 잠을 자고 있다)
+            <br>요 정2 : 왕이시여, 왕이시여, 지금 왕비님이 대경나라 왕자와 (요정1, 3이 다정한 모습을 보여준다) 이러고 있답니다!
+            <br>
+            <br>해설자 : 왕은 꿈에서 깨어나자마자 왕비의 방을 뒤져보았고, 대경나라 왕자와 왕비가 만나고 있다는 증거를 찾아내었습니다.
+            <br>
+            <br>금호왕 : 아…아니 이…이것은!! 여봐라! 당장 왕비를 데려오너라!
+            <br>왕 비 : (신하들에 의해 끌려온 후, 왕 앞에 꿇어앉는다.) 무..무슨일이십니까?
+            <br>금호왕 : 내 너를 새 왕비로 맞아 사랑을 해주었거든 나를 배신하고 바람을 피워?
+            <br>왕 비 : 저.. 전하! 그..그것은
+            <br>금호왕 : 변명따위 필요없다! 당장 이자를 처형하라!
+            <br>
+            <br>해설자 : 이렇게 왕비는 처형되었습니다. 왕비가 죽었다는 소식을 알게 된 왕자는 짝사랑하는 그녀에게 고백을 하러 가는데… 그 주인공은 바로 죽은 왕비의 양딸, 금호나라의 공주였습니다! 한편, 아무것도 모르는 금호나라의 공주는 왕자가 자신의 새 어머니를 죽였다고 생각하고 있었습니다.
+            <br>
+            <br>금호공주 : 무슨 일로 절 찾아오셨죠?
+            <br>왕 자 : 공주님… 예전에 돌담 옆에 숨어 저를 보고 있는 당신에게 첫눈에 반하고 말았습니다. 저와 결혼 해주세요!
+            <br>금호공주 : 뭐라구요? 싫어요! 어찌 저의 어머니를 죽인 사람과 결혼을 할 수 있겠어요?
+            <br>왕 자 : 아아…. 이리도 매정하게… 공주.. 공주!!!
+            <br>요 정1 : 왕자야! 그럼 나랑 사귀자!
+            <br>요 정3 : 아냐! 나랑 만날거야!
+            <br>요 정2 : 아냐! 나야 나!
+            <br>난쟁이7 : 왕자! 드디어 찾았다!
+            <br>난쟁이들 과 요정 : 나랑 만나 왕자! 나랑!!!
+            <br>
+            <br>왕 자 : 아! 정말 이놈에 인기는 너무 피곤해!!!!!!!
+          </p>
+        </div>
+        <div class="contents_c_t" style="margin-bottom: -1vw; line-height: 180%;">
+          <p class="introduce_t"><span><a name="c4">4.</a></span> 여담</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <ul>
+            <li>사냥꾼은 왕자와 무학공주가 함께 있는 장면에서 무학공주가 그의 첫사랑인 대경나라 공주여서 죽이지 못했는데, 무학공주와 대경공주가 동일인물이기 위해서는 무학공주가 대경나라에서 태어났지만 무학나라의 왕자와 결혼을 해야한다. 그렇지않다면 왕자는 무학공주와 바람을 피는 것이며, 왕자는 무학공주의 내연남이다..</li>
+            <li>아무도 누가 어떤 역할을 맡았는지 제대로 기억하지 못한다.</li>
+            <li>중학교 1학년의 작품이기 때문에 맞춤법과 같은 오류가 굉장히 많다.<span class="small-top">2017년적 허용</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

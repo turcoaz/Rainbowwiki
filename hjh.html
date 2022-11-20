@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UFT-8">
+  <meta name="keywords" content="무지개 위키">
+  <meta name="description" content="무지개만의 위키백과 입니다.">
+  <meta name="author" content="we_is_rainbow">
+  <head>
+    <title>무지개 위키</title>
+    <link rel="icon" href="logo.ico">
+  </head>
+  <style>
+    body{
+      margin: 0;
+      background-color: rgba(241, 241, 241, 0.212);
+    }
+    *{
+      font-family: 'GmarketSansLight';
+      word-break: keep-all;
+    }
+    a:link, a:visited, a:active{
+      color : rgb(16, 92, 255);
+      text-decoration: none;
+    }
+    a:hover{
+      color: rgb(16, 92, 255);
+      text-decoration: underline;
+    }
+    @font-face{
+      font-family: 'GmarketSansBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face{
+      font-family: 'GmarketSansMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face{
+      font-family: 'GmarketSansLight';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <style>
+    .left_sidebar{
+      width: 17vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgb(236, 255, 249);
+    }
+    .rainbow_title{
+      display: inline-block;
+      cursor: pointer;
+    }
+    .rainbow_title>h1{
+      margin-top: 4vh;
+      margin-left: 2.5vw;
+      border-style: none;
+      background-color: transparent;
+      font-family: 'GmarketSansBold';
+      font-size: 35px;
+      text-align: center;
+    }
+    .rainbow_title>p{
+      margin-top: -2vw;
+      margin-left: 3.1vw;
+      font-family: 'GmarketSansMedium';
+      font-size: 12px;
+      letter-spacing: 0.8vw;
+    }
+    .left_sidebar>img{
+      width: 6vw;
+      margin-left: -0.5vw;
+      vertical-align: -1.3vw;
+      display: inline-block;
+    }
+    .left_sidebar_l{
+      margin-left: 2.5vw;
+    }
+    .left_sidebar_l>p{
+      font-size: 19px;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    .contents{
+      width: 20vw;
+      height: 40vw;
+      border: 3px solid rgba(116, 116, 116, 0.274);
+      background-color: #ffffff;
+      position: fixed;
+      top: 3.5vh;
+      right: 2vw;
+    }
+    .contents_t{
+      margin-left: 1vw;
+      margin-bottom: 1.2vw;
+      font-size: 22px;
+    }
+    .contents_c{
+      margin-left: 1.5vw;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .contents_c>span, .contents_c_c>span{
+      margin-right: 0.5vw;
+      cursor: pointer;
+    }
+    .contents_c_c{
+      margin-left: 2.8vw;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    strong{
+      font-family: 'GmarketSansMedium';
+    }
+  </style>
+  <style>
+    .main{
+      width: 54.7vw;
+      height: auto;
+      padding: 2vw 2vw;
+      background-color: white;
+      box-shadow: 3px 0px 10px #e6e6e6;
+      position: absolute;
+      top: 0vw;
+      left: 17vw;
+    }
+    .main>h1{
+      margin-top: -0.5vw;
+      font-family: 'GmarketSansMedium';
+    }
+    .main-table{
+      width: 100%;
+      margin-bottom: 50px;
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    .one{
+      padding: 5px;
+      color: white;
+      background-color: black;
+      border-right: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      font-size: 17px;
+      text-align: center;
+    }
+    .two{
+      padding: 5px 20px;
+      border-bottom: 1px solid lightgrey;
+    }
+    .plus{
+      color: rgb(200, 200, 200);
+    }
+    .small{
+      font-size: 12px;
+    }
+    .small-top{
+      font-size: 12px;
+      vertical-align: 0.5vw;
+    }
+    .small-bottom{
+      font-size: 12px;
+      vertical-align: 0.2vw;
+    }
+  </style>
+  <style>
+    .introduce_t{
+      font-size: 20px;
+    }
+    .introduce_t>span{
+      color: rgb(16, 92, 255);
+    }
+    .contents_c_t{
+      margin-bottom: 3vw;
+    }
+    .ideal-type-table{
+      width: 70%;
+      margin-bottom: 20px;
+      text-align: center;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <div class="left_sidebar">
+      <div class="rainbow_title" onclick="location.href='rainbow.html'">
+        <h1>무지개</h1>
+        <p>위키백과</p>
+      </div>
+      <img onclick="location.href='rainbow.html'" style="cursor: pointer;" src="https://i.ibb.co/RzCg9yv/transparent-bg-shadow-designify.png">
+      <div class="left_sidebar_l">
+        <p onclick="location.href='knh.html'">공나현</p>
+        <p onclick="location.href='kms.html'">김민서</p>
+        <p onclick="location.href='kes.html'">김은서</p>
+        <p onclick="location.href='khs.html'">김희서</p>
+        <p onclick="location.href='khj.html'">김희진</p>
+        <p onclick="location.href='jes.html'">정은서</p>
+        <p onclick="location.href='hjh.html'">한주현</p>
+      </div>
+    </div>
+    <div class="contents">
+      <p class="contents_t" style="font-family: 'GmarketSansMedium';">목차</p>
+      <p class="contents_c"><span><a href="#c1">1.</a></span>개요</p>
+      <p class="contents_c"><span><a href="#c2">2.</a></span>특징</p>
+      <p class="contents_c"><span><a href="#c3">3.</a></span>사랑</p>
+      <p class="contents_c"><span><a href="#c4">4.</a></span>이상형</p>
+      <p class="contents_c_c"><span><a href="#c4-1">4.1</a></span>외모</p>
+      <p class="contents_c_c"><span><a href="#c4-2">4.2</a></span>성격</p>
+      <p class="contents_c_c"><span><a href="#c4-3">4.3</a></span>특징</p>
+      <p class="contents_c_c"><span><a href="#c4-4">4.4</a></span>연애</p>
+      <p class="contents_c"><span><a href="#c5">5.</a></span>출연 작품</p>
+      <p class="contents_c_c"><span><a href="#c5-1">5.1</a></span>뮤지컬</p>
+      <p class="contents_c"><span><a href="#c6">6.</a></span>저서</p>
+      <p class="contents_c"><span><a href="#c7">7.</a></span>논란 및 사건사고</p>
+      <p class="contents_c"><span><a href="#c8">8.</a></span>여담</p>
+    </div>
+    <div class="main">
+      <h1>한주현</h1>
+      <table class="main-table">
+        <tbody>
+          <tr>
+            <td colspan="2" style="background-color: black; text-align: center;">
+              <div class="wiki-paragraph">
+                <strong>
+                  <p style="color: white; font-family: 'GmarketSansMedium'; font-size: 20px; line-height: 170%;">한주현<span style="font-family: 'GmarketSansMedium';"><br>韓?? | Han Ju-Hyeon</span></p>
+                </strong>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <div class="wiki-paragraph">
+                <img width="100%" style="margin-bottom: -7px;" src="" alt="한주현">
+              </div>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <td class="one" rowspan="2" width="30%">
+              <div class="wiki-paragraph">
+                <strong>출생</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>2004년 05월 19일 (18세)</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>???</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>거주지</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <img width="25px;" style="margin-top: 5px;" src="https://w.namu.la/s/43a07e65f573eb41fffe67ac0d1008fa73b5c7a04a004ff9004ddf0680524c5c5bd8a30c724fd7966bd7d3a2f60d0bd17c3cc159dd41f704f9b6dc188a21346d966506a379dd6e5b3842dcf097388e3a6f014fc1fb4587b999d32acfcef8cf3a">
+                <span style="vertical-align: 0.2vw;">대한민국</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>국적</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <img width="25px;" style="margin-top: 5px;" src="https://w.namu.la/s/43a07e65f573eb41fffe67ac0d1008fa73b5c7a04a004ff9004ddf0680524c5c5bd8a30c724fd7966bd7d3a2f60d0bd17c3cc159dd41f704f9b6dc188a21346d966506a379dd6e5b3842dcf097388e3a6f014fc1fb4587b999d32acfcef8cf3a">
+                <span style="vertical-align: 0.2vw;">대한민국</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>본관</strong>
+              </div>
+            </td>
+            <td class="two">
+              <p><a href="https://namu.wiki/w/%EC%B2%AD%EC%A3%BC%20%ED%95%9C%EC%94%A8">청주 한씨</a></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>신체</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>162cm, B형, 250mm</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>가족</strong>
+              </div>
+            </td>
+            <td class="two"> 
+              <div class="wiki-paragraph">
+                <p style="line-height: 150%;">아버지, 어머니, 남동생 한승유<span class="small-top">(2006년생)</span></p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>학력</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <div style="margin-top: 15px; margin-bottom: 8px;">
+                  <p>신일유치원<span class="small"> (졸업)</span></p>
+                  <img width="23px" src="https://i.ibb.co/nLZf9Df/image.jpg" alt="청구초"><span style="vertical-align: 0.4vw;"><span> </span><a href="https://namu.wiki/w/%EC%84%9C%EC%9A%B8%EC%B2%AD%EA%B5%AC%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90">서울청구초등학교</a></span><span class="small" style="vertical-align: 0.45vw;"> (졸업)</span><br>
+                  <img width="23px" style="margin-top: 9px;" src="https://i.ibb.co/8MH38wZ/image.jpg" alt="금호여중"><span style="vertical-align: 0.4vw;"><span> </span><a href="https://namu.wiki/w/%EA%B8%88%ED%98%B8%EC%97%AC%EC%9E%90%EC%A4%91%ED%95%99%EA%B5%90(%EC%84%9C%EC%9A%B8)">금호여자중학교</a></span><span class="small" style="vertical-align: 0.5vw;"> (졸업)</span><br>
+                  <img width="23px" style="margin-top: 9px;" src="https://i.ibb.co/3SwzD7c/image.jpg" alt="보성여고"><span style="vertical-align: 0.4vw;"><span> </span>보성여자고등학교</span><span class="small" style="vertical-align: 0.5vw;"> (재학)</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>종교</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>무종교</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>취미</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>???</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>특기</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>???</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>별명</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p><strong>형</strong>, 한주형, 카페인</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>MBTI</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p><a href="https://namu.wiki/w/INTP" title="INTP">INTP</a></p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>SNS</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <a href="https://www.instagram.com/juhyun_0519/"><img width="25px;" style="margin-top: 5px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"></a>
+                <span class="small-bottom">(본계)</span>
+                <a href="https://www.instagram.com/upu_1009/"><img width="25px;" style="margin-top: 5px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"></a>
+                <span class="small-bottom">(무비계)</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="introduce">
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c1">1.</a></span> 개요</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <img height="300px" style="margin-top: 10px; border: 2px solid black;" src="" alt="한주현_개요">
+          <img height="300px" style="margin-top: 10px; margin-left: 10px; border: 2px solid black;" src="" alt="한주현_개요">
+          <p>한국의 고등학생. 현재는 뭐하고 지내는지 모르겠다.</p>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c2">2.</a></span> 특징</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>카페인의 친구, 까르보네 좋아함</p>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c3">3.</a></span> 사랑</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>(공백)</p>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c4">4.</a></span> 이상형</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p></p>
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c4-1">4.1</a></span> 외모</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <table class="ideal-type-table" style="border: 2px solid #ffe053">
+            <tbody>
+              <tr>
+                <td colspan="2" style="background-color: #ffe053;">외모 (40)</td>
+              </tr>
+                <td class="one" style="border-top: 1px solid lightgrey; color: black; background-color: #ffeea0;">머리 색깔</td>
+                <td class="two" style="border-top: 1px solid lightgrey;">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">머리 스타일</td>
+                <td class="two">소화시 상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">이마 넓이</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">눈 간격</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">눈 모양</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">쌍커풀 유/무</td>
+                <td class="two">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">속 쌍커풀/겉 쌍커풀</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">콧대</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">코 모양</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">보조개 유/무</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">입 모양</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">입술 두께</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">입꼬리</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">얼굴</td>
+                <td class="two">못생기지 않은 상</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">얼굴형</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">턱</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">치열</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">강아지상/고양이상</td>
+                <td class="two">강아지상</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">앞머리 유/무</td>
+                <td class="two">있음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">안경 유/무</td>
+                <td class="two">소화시 상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">어깨너비</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">목소리</td>
+                <td class="two">과한 저음 제외</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">목소리 이상형 인물(5명)<br>(캐릭터+실존인물 모두)</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">목 굵기</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">가슴 크기</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">골반너비</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">손 크기</td>
+                <td class="two">본인보다 큼</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">엉덩이 크기</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">성기 크기</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">다리 길이</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">허벅지 둘레</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">발 크기</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">n등신</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">피부톤</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">몸매</td>
+                <td class="two">보통</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">키</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">타투 유/무</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">얼굴 성형 유/무</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;">몸매 성형 유/무</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffeea0;"> 얼굴 이상형 인물(5명)<br>(캐릭터+실존인물 모두)</td>
+                <td class="two"></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c4-2">4.2</a></span> 성격</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <table class="ideal-type-table" style="border: 2px solid #d792ff;">
+            <tbody>
+              <tr>
+                <td colspan="2" style="background-color: #d792ff;">성격 (7)</td>
+              </tr>
+              <tr>
+                <td class="one" style="border-top: 1px solid lightgrey; color: black; background-color: #eccbff;">성격 한 줄 요약</td>
+                <td class="two" style="border-top: 1px solid lightgrey;">차분, 조금 말 많은건 괜찮음<br>본인보다 겁나 활발한 사람</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #eccbff;">MBTI</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #eccbff;">츤데레/다정</td>
+                <td class="two">반반</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #eccbff;">강아지/고양이/곰/여우</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #eccbff;">깔끔 여부</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #eccbff;">빠릿빠릿 정도</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #eccbff;">성격 이상형 인물(5명)<br>(캐릭터+실존인물 모두)</td>
+                <td class="two"></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c4-3">4.3</a></span> 특징</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <table class="ideal-type-table" style="border: 2px solid #92d7ff;">
+            <tbody>
+              <tr>
+                <td colspan="2" style="background-color: #92d7ff;">특징 (65)</td>
+              </tr>
+              <tr>
+                <td class="one" style="border-top: 1px solid lightgrey; color: black; background-color: #bfe8ff;">내국인/외국인</td>
+                <td class="two" style="border-top: 1px solid lightgrey;">내국인</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">이름</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">이름 길이</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">생일</td>
+                <td class="two">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">혈액형</td>
+                <td class="two">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">형제 자매 유/무</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">가치관</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">종교</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">거주 지역</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">말투</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">사투리</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">취미</td>
+                <td class="two">사진 촬영, 여행,<br>노래, 소설, 피아노</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">좋아하는 것</td>
+                <td class="two">집, 여행,<br>기타 연주, 피아노</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">잘하는 것</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">특이사항</td>
+                <td class="two">말 착하게 함,<br>대가리가 잘 굴러감</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">패션 스타일</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">식사의 양</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">식사 매너</td>
+                <td class="two">좋음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">주행성/야행성</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">취침 시간</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">눈치 유/무</td>
+                <td class="two">빠름</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">눈물의 양</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">더위 잘탐/추위 잘탐</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">반려동물 유/무</td>
+                <td class="two">없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">집착의 정도</td>
+                <td class="two">조금 많이</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">질투의 정도</td>
+                <td class="two">조금 많이</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">운동 신경</td>
+                <td class="two">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">손재주 유/무</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">요리 실력</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">노래 실력</td>
+                <td class="two">잘함</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">악기 연주 실력</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">춤 실력</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">그림 실력</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">친구의 수</td>
+                <td class="two">보통</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">이상형이 연애상대로 보는<br>성별을 가진 친구의 수</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">흡연 여부</td>
+                <td class="two">안함</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">말의 양</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">욕 사용 빈도</td>
+                <td class="two">보통</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">벌레 박멸 가능 여부</td>
+                <td class="two">가능</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">자취 여부</td>
+                <td class="two">가족과 함께</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">모범생/평범/일진</td>
+                <td class="two">일진 제외</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">성적의 수준</td>
+                <td class="two">본인보다 잘함</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">대학교 재학 여부</td>
+                <td class="two">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">문과/이과</td>
+                <td class="two">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">전공 과목</td>
+                <td class="two">사회과학분야</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">직업 유/무</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">직업</td>
+                <td class="two">본인과 벌이 비슷</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">놀이기구 잘 탐/못 탐</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">담력 높음/낮음</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">공포물 잘 봄/못 봄</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">선호하는 영화/드라마 장르</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">선호하는 애니 장르</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">선호하는 음악 장르</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">주량</td>
+                <td class="two">너무 못함 제외</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">주사</td>
+                <td class="two">개판 제외</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">운전 여부</td>
+                <td class="two">상관없음</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">운전 실력</td>
+                <td class="two">운전면허 있지만 잘 못함</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">군대 여부</td>
+                <td class="two">다녀옴</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">군대 종류<br>(육/해/공/해병대/공익)</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">연예인 덕질 여부</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">2D 덕질 여부</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">솔직 여부</td>
+                <td class="two">조금의 거짓 가능</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">결혼 여부</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">이혼 경력</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #bfe8ff;">자식 유/무</td>
+                <td class="two"></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c4-4">4.4</a></span> 연애</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <table class="ideal-type-table" style="border: 2px solid #ff92bf;">
+            <tbody>
+              <tr>
+                <td colspan="2" style="background-color: #ff92bf;">연애 (15)</td>
+              </tr>
+              <tr>
+                <td class="one" style="border-top: 1px solid lightgrey; color: black; background-color: #ffc5dd;">연애 공개/비공개</td>
+                <td class="two" style="border-top: 1px solid lightgrey;"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">적극적인 사람/소심한 사람</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">애칭 유/무<br>(원하는 애칭)</td>
+                <td class="two"><br></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">스킨십 빈도</td>
+                <td class="two">조금 자주</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">이벤트 빈도</td>
+                <td class="two">100n일</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">데이트 빈도</td>
+                <td class="two">일주일에 1 ~ 2번</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">데이트 장소</td>
+                <td class="two">집, 외출 적당하게</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">더치페이 여부</td>
+                <td class="two">더치페이</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">데이트 통장 유/무</td>
+                <td class="two">고민 필요</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">전화/문자</td>
+                <td class="two">뭐든 매일</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">연락 답변 소요 시간</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">내가 상대의 n번째 연인</td>
+                <td class="two">첫번째</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">친구같은 연애/달달한 연애</td>
+                <td class="two">친구</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">능숙한 연애/서툰 연애</td>
+                <td class="two"></td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">프로포즈 공개/비공개</td>
+                <td class="two">비공개</td>
+              </tr>
+              <tr>
+                <td class="one" style="color: black; background-color: #ffc5dd;">프로포즈 방식</td>
+                <td class="two"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c5">5.</a></span> 출연 작품</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c5-1">5.1</a></span> 뮤지컬</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <ul>
+            <li><span><a href="snowwhite.html">백설공주</a></span> (2017)</li>
+            <li>무제 (2019)</li>
+          </ul>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c6">6.</a></span> 저서</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <ul>
+            <li><span><a href="rainingday.html">비오는날</a></span> (2017)</li>
+          </ul>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c7">7.</a></span> 논란 및 사건사고</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>자세한 내용은 <a href="">한주현/논란</a> 문서를 참고하세요.</p>
+        </div>
+        <div class="contents_c_t" style="margin-bottom: -1vw; line-height: 180%;">
+          <p class="introduce_t"><span><a name="c8">8.</a></span> 여담</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <ul>
+            <li>한주현 집 비밀번호는 조하은이 알고 있다는 소문이 있다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
