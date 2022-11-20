@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UFT-8">
+  <meta name="keywords" content="무지개 위키">
+  <meta name="description" content="무지개만의 위키백과 입니다.">
+  <meta name="author" content="we_is_rainbow">
+  <head>
+    <title>무지개 위키</title>
+    <link rel="icon" href="logo.ico">
+  </head>
+  <style>
+    body{
+      margin: 0;
+      background-color: rgba(241, 241, 241, 0.212);
+    }
+    *{
+      font-family: 'GmarketSansLight';
+      word-break: keep-all;
+    }
+    a:link, a:visited, a:active{
+      color : rgb(16, 92, 255);
+      text-decoration: none;
+    }
+    a:hover{
+      color: rgb(16, 92, 255);
+      text-decoration: underline;
+    }
+    @font-face{
+      font-family: 'GmarketSansBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face{
+      font-family: 'GmarketSansMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face{
+      font-family: 'GmarketSansLight';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <style>
+    .left_sidebar{
+      width: 17vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgb(236, 255, 249);
+    }
+    .rainbow_title{
+      display: inline-block;
+      cursor: pointer;
+    }
+    .rainbow_title>h1{
+      margin-top: 4vh;
+      margin-left: 2.5vw;
+      border-style: none;
+      background-color: transparent;
+      font-family: 'GmarketSansBold';
+      font-size: 35px;
+      text-align: center;
+    }
+    .rainbow_title>p{
+      margin-top: -2vw;
+      margin-left: 3.1vw;
+      font-family: 'GmarketSansMedium';
+      font-size: 12px;
+      letter-spacing: 0.8vw;
+    }
+    .left_sidebar>img{
+      width: 6vw;
+      margin-left: -0.5vw;
+      vertical-align: -1.3vw;
+      display: inline-block;
+    }
+    .left_sidebar_l{
+      margin-left: 2.5vw;
+    }
+    .left_sidebar_l>p{
+      font-size: 19px;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    .contents{
+      width: 20vw;
+      height: 40vw;
+      border: 3px solid rgba(116, 116, 116, 0.274);
+      background-color: #ffffff;
+      position: fixed;
+      top: 3.5vh;
+      right: 2vw;
+    }
+    .contents_t{
+      margin-left: 1vw;
+      margin-bottom: 1.2vw;
+      font-size: 22px;
+    }
+    .contents_c{
+      margin-left: 1.5vw;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .contents_c>span, .contents_c_c>span{
+      margin-right: 0.5vw;
+      cursor: pointer;
+    }
+    .contents_c_c{
+      margin-left: 2.8vw;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    strong{
+      font-family: 'GmarketSansMedium';
+    }
+  </style>
+  <style>
+    .main{
+      width: 54.7vw;
+      height: auto;
+      padding: 2vw 2vw;
+      background-color: white;
+      box-shadow: 3px 0px 10px #e6e6e6;
+      position: absolute;
+      top: 0vw;
+      left: 17vw;
+    }
+    .main>h1{
+      margin-top: -0.5vw;
+      font-family: 'GmarketSansMedium';
+    }
+    .main-table{
+      width: 100%;
+      margin-bottom: 50px;
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    .table{
+      width: 100%;
+      margin-bottom: 2vw;
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    .profile{
+      width: 75%;
+      margin: auto;
+      margin-bottom: 2vw;
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    .name:link, .name:visited, .name:active{
+      color : black;
+      text-decoration: none;
+    }
+    .name:hover{
+      color: black;
+      text-decoration: blue underline;
+    }
+    #count{
+      width: auto;
+      padding: 4px 7px;
+      background-color: lavenderblush;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+    .one{
+      padding: 5px;
+      border-right: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      font-size: 17px;
+      text-align: center;
+    }
+    .two{
+      padding: 5px 20px;
+      border-bottom: 1px solid lightgrey;
+      word-break: keep-all;
+    }
+    .four-1{
+      width: 42.863%;
+      border-top: 50px solid black;
+      border-left: 50px solid black;
+      border-right: 7px solid black;
+      border-bottom: 7px solid black;
+    }
+    .four-2{
+      width: 42.863%;
+      border-top: 50px solid black;
+      border-left: 7px solid black;
+      border-right: 50px solid black;
+      border-bottom: 7px solid black;
+    }
+    .four-3{
+      width: 42.863%;
+      border-top: 7px solid black;
+      border-left: 50px solid black;
+      border-right: 7px solid black;
+      border-bottom: 7px solid black;
+    }
+    .four-4{
+      width: 42.863%;
+      margin-top: -10px;
+      border-top: 7px solid black;
+      border-left: 7px solid black;
+      border-right: 50px solid black;
+      border-bottom: 7px solid black;
+    }
+    .four-t{
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 5px;
+      background-color: black;
+      text-align: center;
+    }
+    .plus{
+      color: rgb(200, 200, 200);
+    }
+    .small{
+      font-size: 12px;
+    }
+    .small-top{
+      font-size: 12px;
+      vertical-align: 0.5vw;
+    }
+    .small-bottom{
+      font-size: 12px;
+      vertical-align: 0.2vw;
+    }
+  </style>
+  <style>
+    .introduce_t{
+      font-size: 20px;
+    }
+    .introduce_t>span{
+      color: rgb(16, 92, 255);
+    }
+    .contents_c_t{
+      margin-bottom: 3vw;
+    }
+    .ideal-type-table{
+      width: 70%;
+      margin-bottom: 20px;
+      text-align: center;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <div class="left_sidebar">
+      <div class="rainbow_title" onclick="location.href='rainbow.html'">
+        <h1>무지개</h1>
+        <p>위키백과</p>
+      </div>
+      <img onclick="location.href='rainbow.html'" style="cursor: pointer;" src="https://i.ibb.co/RzCg9yv/transparent-bg-shadow-designify.png">
+      <div class="left_sidebar_l">
+        <p onclick="location.href='knh.html'">공나현</p>
+        <p onclick="location.href='kms.html'">김민서</p>
+        <p onclick="location.href='kes.html'">김은서</p>
+        <p onclick="location.href='khs.html'">김희서</p>
+        <p onclick="location.href='khj.html'">김희진</p>
+        <p onclick="location.href='jes.html'">정은서</p>
+        <p onclick="location.href='hjh.html'">한주현</p>
+      </div>
+    </div>
+    <div class="contents">
+      <p class="contents_t" style="font-family: 'GmarketSansMedium';">목차</p>
+      <p class="contents_c"><span><a href="#c1">1.</a></span>개요</p>
+      <p class="contents_c"><span><a href="#c2">2.</a></span>멤버</p>
+      <p class="contents_c_c"><span><a href="#c2-1">2.1</a></span>멤버 간의 케미</p>
+      <p class="contents_c"><span><a href="#c3">3.</a></span>역사</p>
+      <p class="contents_c"><span><a href="#c4">4.</a></span>특징</p>
+      <p class="contents_c_c"><span><a href="#c4-1">4.1</a></span>외모</p>
+      <p class="contents_c_c"><span><a href="#c4-2">4.2</a></span>성격</p>
+      <p class="contents_c"><span><a href="#c5">5.</a></span>논란 및 사건사고</p>
+      <p class="contents_c"><span><a href="#c6">6.</a></span>여담</p>
+    </div>
+    <script>
+      alert("눈물의 통보글. \n무지개 위키 만들기 빡셈. 그니까 만관부임 제발. \n※ 모바일용 안만들었음. 노트북, 탭 추천. ※"); 
+    </script>
+    <div class="main">
+      <h1>무지개</h1>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <div class="wiki-paragraph" onclick="location.href='rainbow.html'" style="cursor: pointer;">
+                <img width="100px" style="margin-top: -10px; margin-bottom: -40px;" src="https://i.ibb.co/RzCg9yv/transparent-bg-shadow-designify.png">
+                <p><strong style="letter-spacing: 0.8vw;">Rainbow</strong></p>
+                <div style="display: inline-block; margin: 0 10px; padding: 1px 10px; background-image: linear-gradient(90deg, rgb(236, 0, 0), rgb(255, 136, 0), rgb(255, 238, 0), rgb(0, 116, 19), rgb(0, 89, 255), rgb(0, 26, 110), rgb(98, 0, 128)); width:90%">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <p style="font-size: 15px; cursor: pointer;">
+                <span style="margin-right: 40px;"><a class="name" href="knh.html">공나현</a></span><span style="margin-right: 40px;"><a class="name" href="kms.html">김민서</a></span><span style="margin-right: 40px;"><a class="name" href="kes.html">김은서</a></span><span style="margin-right: 40px;"><a class="name" href="khs.html">김희서</a></span><span style="margin-right: 40px;"><a class="name" href="khj.html">김희진</a></span><span style="margin-right: 40px;"><a class="name" href="jes.html">정은서</a></span><span><a class="name" href="hjh.html">한주현</a></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="profile">
+        <tbody>
+          <tr>
+            <td>
+              <img width="100%" style="margin-bottom: -6px;" src="https://i.ibb.co/17FnCzp/image.png" alt="무지개">
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 7px 5px; border-top: 1px solid lightgrey; font-size: 13px; text-align: center; line-height: 80%;">
+              <p><span style="margin-right: 20px;"><a class="name" href="kes.html">김은서</a></span><span style="margin-right: 20px;"><a class="name" href="hjh.html">한주현</a></span><span style="margin-right: 20px;"><a class="name" href="khj.html">김희진</a></span></p>
+              <p><span style="margin-right: 20px;"><a class="name" href="kms.html">김민서</a></span><span style="margin-right: 20px;"><a class="name" href="khs.html">김희서</a></span><span style="margin-right: 20px;"><a class="name" href="knh.html">공나현</a></span><span style="margin-right: 20px;"><a class="name" href="jes.html">정은서</a></span></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="main-table">
+        <tbody>
+          <tr>
+            <td colspan="2" style="padding: 20px 5px; border-bottom: 1px solid lightgrey; text-align: center;">
+              <table style="margin: auto;">
+                <tbody>
+                  <td style="padding: -10px 10px; text-align: center;">
+                    <img width="170px" style="margin: -50px -10px;" src="https://i.ibb.co/RzCg9yv/transparent-bg-shadow-designify.png">
+                  </td>
+                  <td style="padding: -10px 10px; border-left: 2px solid lightgrey; text-align: left;">
+                    <strong style="margin-left: 20px; font-size: 25px; line-height: 100%;">무지개<br><span style="margin-left: 20px; font-family: 'GmarketSansMedium'; font-size: 15px;">Rainbow | 無知吤</span></strong>
+                  </td>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="one" rowspan="2" width="30%">
+              <div class="wiki-paragraph">
+                <strong>그룹명</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>무지개</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p style="margin: 6px 0; font-size: 25px;">無<span> </span><span class="small-bottom">없을 무</span><span> </span>知<span> </span><span class="small-bottom">알 지</span><span> </span>吤<span> </span><span class="small-bottom">큰소리 개</span></p>
+                <p>: 지식은 없지만 목소리가 큰 사람들</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <strong>국적</strong>
+            </td>
+            <td class="two">
+              <img width="25px;" style="margin-top: 5px;" src="https://i.ibb.co/K9bYScW/Flag-of-South-Korea.png">
+              <span style="vertical-align: 0.2vw;">대한민국 |</span>
+              <img width="25px;" style="margin-top: 5px;" src="https://i.ibb.co/gZyNwx4/Flag-of-Japan.png">
+              <span style="vertical-align: 0.2vw;">일본 |</span>
+              <img width="25px;" style="margin-top: 5px; margin-left: 5px; vertical-align: 0.1vw;" src="https://i.ibb.co/0VmHNxf/Flag-of-Australia.png">
+              <span style="vertical-align: 0.2vw;">호주</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>결성 일</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>2018년 5월 30일<span> | </span><span id="count" style="vertical-align: 1px;"></span></p>
+                <script>
+                  var dday = new Date("May 30, 2018, 0:00:00").getTime();
+            
+                  setInterval(function() {
+                    var today = new Date().getTime();
+                    var gap = today - dday;
+                    var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+                    var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+                    var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+            
+                    document.getElementById("count").innerHTML = "+" + day + "일째";
+                  }, 1000);
+                </script>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>특기</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <p>누군가에게 금방 사랑에 빠지기</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="one">
+              <div class="wiki-paragraph">
+                <strong>SNS</strong>
+              </div>
+            </td>
+            <td class="two">
+              <div class="wiki-paragraph">
+                <a href="https://www.instagram.com/we_is_rainbow/"><img width="25px;" style="margin-top: 5px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="introduce">
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c1">1.</a></span> 개요</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <div>
+            <div style="margin-top: 20px;">
+              <img class="four-1" width="45%" style="display: inline-block;" src="https://i.ibb.co/BcKtpGn/1.png" alt="무지개_개요">
+              <img class="four-2" style="margin-left: -6px; display: inline-block;" src="https://i.ibb.co/17FnCzp/image.png" alt="무지개_개요">
+            </div>
+            <div style="margin-top: -12px; margin-bottom: -12px;">
+              <img class="four-3" style="display: inline-block;" src="https://i.ibb.co/k3mbRMG/3.png" alt="무지개_개요">
+              <img class="four-4" style="margin-left: -6px; display: inline-block;"src="https://i.ibb.co/ZSSbnv4/4.png" alt="무지개_개요">
+            </div>
+            <div class="four-t">
+              <img width="8%" src="https://i.ibb.co/CtMBSbz/rainbow-1.png"><span style="margin-left: 10px; font-size: 20px; color: white; vertical-align: 25px;">인생네컷</span>
+              <p></p>
+            </div>
+          </div>
+          <p>대한민국의 그룹. 2017년 서울금호여자중학교 1학년 5반 일부 학생들이 모여 만든 그룹이다.</p>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c2">2.</a></span> 멤버</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>공나현 김민서 김은서 김희서 김희진 정은서 한주현</p>
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c2-1">2.1</a></span> 멤버 간의 케미</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <ul>
+            <li>공나현 X 김민서 = 공민</li>
+            <li>공나현 X 김은서 = 감기</li>
+            <li>공나현 X 김희서 = 공호</li>
+            <li>공나현 X 김희진 = 공진</li>
+            <li>공나현 X 정은서 = 공정</li>
+            <li>공나현 X 한주현 = 공주</li>
+            <br>
+            <li>김민서 X 공나현 = 민감</li>
+            <li>김민서 X 김은서 = 민기</li>
+            <li>김민서 X 김희서 = 민호</li>
+            <li>김민서 X 김희진 = 민진</li>
+            <li>김민서 X 정은서 = 민정</li>
+            <li>김민서 X 한주현 = 민형</li>
+            <br>
+            <li>김은서 X 공나현 = 메공</li>
+            <li>김은서 X 김민서 = 메민<span class="plus"><span> </span><del>메민은 찐이야</del></span></li>
+            <li>김은서 X 김희서 = 메호</li>
+            <li>김은서 X 김희진 = 기진<span class="small-top">팬덤명은 맥진</span></li>
+            <li>김은서 X 정은서 = 메정</li>
+            <li>김은서 X 한주현 = 메형<span class="plus"><span> </span>메형은 운명이야</span></li>
+            <br>
+            <li>김희서 X 공나현 = 호감<span class="plus"><span> </span><del>호주감자</del></span></li>
+            <li>김희서 X 김민서 = 호민</li>
+            <li>김희서 X 김은서 = 호기</li>
+            <li>김희서 X 김희진 = 호진</li>
+            <li>김희서 X 정은서 = 호정</li>
+            <li>김희서 X 한주현 = 호형<span class="small-top">팬덤명은 호제</span><span class="plus"><span> </span>사실 그냥 채무관계이다<span> </span><del>2018년부터 n년째 갚지 못한 만원</del></span></li>
+            <br>
+            <li>김희진 X 공나현 = 진공<span class="small-top">팬덤명은 청소기?</span></li>
+            <li>김희진 X 김민서 = 진민</li>
+            <li>김희진 X 김은서 = 진기<span class="small-top">팬덤명은 명기이며, 정은서는 명기 1기라고 한다.</span></li>
+            <li>김희진 X 김희서 = 진호</li>
+            <li>김희진 X 정은서 = 진정</li>
+            <li>김희진 X 한주현 = 진형<span class="plus"><span> </span><del>??? : 나 쟤랑 어색해</del></span></li></li>
+            <br>
+            <li>정은서 X 공나현 = 정공</li>
+            <li>정은서 X 김민서 = 정민</li>
+            <li>정은서 X 김은서 = 정기</li>
+            <li>정은서 X 김희서 = 정호</li>
+            <li>정은서 X 김희진 = 정진</li>
+            <li>정은서 X 한주현 = 정형</li>
+            <br>
+            <li>한주현 X 공나현 = 형공</li>
+            <li>한주현 X 김민서 = 형민</li>
+            <li>한주현 X 김은서 = 한기</li>
+            <li>한주현 X 김희서 = 형호</li>
+            <li>한주현 X 김희진 = 형진<span class="plus"><span> </span><del>??? : 나 쟤랑 어색해</del></span></li>
+            <li>한주현 X 정은서 = 한정</li>
+          </ul>
+        </div>
+        
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c3">3.</a></span> 역사</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>역사?</p>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c4">4.</a></span> 특징</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>한 줄 요약 : 지식은 없지만 목소리는 큼</p>
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c4-1">4.1</a></span> 외모</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>나쁘지 않아</p>
+          <p class="introduce_t" style="font-size: 15px;"><span><a name="c4-2">4.2</a></span> 성격</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>어디가서 꿀리지 않아</p>
+        </div>
+        <div class="contents_c_t" style="line-height: 180%;">
+          <p class="introduce_t"><span><a name="c5">5.</a></span> 논란 및 사건사고</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <p>자세한 내용은 <a href="rainbow-argument.html">무지개/논란</a> 문서를 참고하세요.</p>
+        </div>
+        <div class="contents_c_t" style="margin-bottom: -1vw; line-height: 180%;">
+          <p class="introduce_t"><span><a name="c6">6.</a></span> 여담</p>
+          <hr style="margin-top: -5px; margin-bottom: 10px; border: 1px color= lightgrey;" width="100%">
+          <ul>
+            <li>동대문 두끼에서 커플링 공수에 대해 약 30분 이상 논의했다. <span class="plus">나페스..도 아니고 이게 뭐람</span></li>
+            <li>김희서는 호주로 대뜸 이민을 가버리더니 3년동안 한국에 한 번도 안오고 있다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
